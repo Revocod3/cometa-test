@@ -1,6 +1,6 @@
 # cometa-test
 
-Complexity of the test code
+Test code of complexity.
 
 In the following file you will find two functions:
 
