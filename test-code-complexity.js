@@ -22,14 +22,14 @@ const isPalindromeTwo = (str) => {
 
 // The time complexity for the first version of this function
 // In terms of Big O notation we could agree that it's O(n)
-// And the space complexity of the this function is O(1)
+// And the space complexity of this function is O(1)
 
 const repeatedLetterOne = (str) =>
   str.split``.filter((e, i, a) => a.indexOf(e) !== i)[0] || null;
 
 // The time complexity for the second version of this function
 // In terms of Big O notation we could agree that it's O(n)
-// And the space complexity of the this function is O(n)
+// And the space complexity of this function is O(n)
 
 const repeatedLetterTwo = (str) => {
   const checkRepeated = /(.).*?\1/;
