@@ -21,7 +21,7 @@ const isPalindromeTwo = (str) => {
 };
 
 // The time complexity for the first version of this function
-// In terms of Big O notation we could agree that it's O(n²)
+// In terms of Big O notation we could agree that it's O(n)
 // And the space complexity of the this function is O(1)
 
 const repeatedLetterOne = (str) =>
@@ -32,15 +32,16 @@ const repeatedLetterOne = (str) =>
 // And the space complexity of the this function is O(n)
 
 const repeatedLetterTwo = (str) => {
-  if (!/(.).*?\1/.test(str)) return null;
+  const checkRepeated = /(.).*?\1/;
+  if (!checkRepeated.test(str)) return null;
 
-  let h = new Set();
+  let objectOfLetters = new Set();
   for (let i = 0; i <= str.length - 1; i++) {
-    let c = str[i];
-    if (h.has(c)) {
-      return c;
+    let letter = str[i];
+    if (objectOfLetters.has(letter)) {
+      return letter;
     } else {
-      h.add(c);
+      objectOfLetters.add(letter);
     }
   }
 };
